@@ -66,7 +66,7 @@ class TestAPI < MiniTest::Test
 
     response = @sg.client.access_settings.activity.get(query_params: params, request_headers: headers)
 
-    assert_equal('200', response.status_code)
+    assert_equal('400', response.status_code)
   end
 
   def test_access_settings_whitelist_post
